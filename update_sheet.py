@@ -176,17 +176,15 @@ for i in range(7):
 # 4. Update Sheet
 
 if data_to_insert:
-
     try:
-
         worksheet.batch_clear(['A2:C251'])
-
         worksheet.update('A2', data_to_insert)
-
+        
         ist_now = (datetime.utcnow() + timedelta(hours=5, minutes=30)).strftime('%d-%b %H:%M')
-
         status_msg = f"Data Date: {fetched_date_str} | Last Update: {ist_now} (IST)"
-
         worksheet.update('K2', [[status_msg]])
-
+        
         print(f"SUCCESS: Sheet Updated successfully with Turnover Data for {fetched_date_str}!")
+        
+    except Exception as e:
+        print(f"Error updating sheet: {e}")
