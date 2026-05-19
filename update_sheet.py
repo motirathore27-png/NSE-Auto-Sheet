@@ -42,7 +42,7 @@ client = gspread.authorize(creds)
 
 # ⚠️ अपनी गूगल शीट की ID यहाँ दोबारा डालना न भूलें
 
-spreadsheet_id = "d/1SYZAJfbegSsjOiCY95JFoAvaL0xQaBEHMCVMT3SAli8" 
+spreadsheet_id = "1SYZAJfbegSsjOiCY95JFoAvaL0xQaBEHMCVMT3SAli8" 
 
 worksheet = client.open_by_key(spreadsheet_id).worksheet("Top 250 Stocks")स्टॉक टिप्स
 
@@ -191,12 +191,3 @@ if data_to_insert:
         worksheet.update('K2', [[status_msg]])
 
         print(f"SUCCESS: Sheet Updated successfully with Turnover Data for {fetched_date_str}!")
-
-    except Exception as e:
-
-        print(f"Google Sheet Error: {str(e)}")
-
-else:
-
-
-    print("FAILED: पिछले 7 दिनों में से किसी भी दिन की फाइल नहीं मिली या प्रोसेस नहीं हुई।")
