@@ -42,9 +42,9 @@ client = gspread.authorize(creds)
 
 # ⚠️ अपनी गूगल शीट की ID यहाँ दोबारा डालना न भूलें
 
-spreadsheet_id = "1SYZAJfbegSsjOiCY95JFoAvaL0xQaBEHMCVMT3SAli8" 
+spreadsheet_id = "d/1SYZAJfbegSsjOiCY95JFoAvaL0xQaBEHMCVMT3SAli8" 
 
-worksheet = client.open_by_key(spreadsheet_id).worksheet("Top 250 Stocks")
+worksheet = client.open_by_key(spreadsheet_id).worksheet("Top 250 Stocks")स्टॉक टिप्स
 
 
 
@@ -194,7 +194,7 @@ if data_to_insert:
 
     except Exception as e:
 
-        print(f"Google Sheet Error: {str(e)}")स्प्रेडशीट सॉफ़्टवेयर
+        print(f"Google Sheet Error: {str(e)}")
 
 else:
 
