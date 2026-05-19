@@ -44,8 +44,7 @@ client = gspread.authorize(creds)
 
 spreadsheet_id = "1SYZAJfbegSsjOiCY95JFoAvaL0xQaBEHMCVMT3SAli8" 
 
-worksheet = client.open_by_key(spreadsheet_id).worksheet("Top 250 Stocks")स्टॉक टिप्स
-
+worksheet = client.open_by_key(spreadsheet_id).worksheet("Top 250 Stocks")
 
 
 # 2. NSE Data Fetcher
